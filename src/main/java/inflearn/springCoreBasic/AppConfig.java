@@ -2,6 +2,7 @@ package inflearn.springCoreBasic;
 
 import inflearn.springCoreBasic.discount.DiscountPolicy;
 import inflearn.springCoreBasic.discount.FixDiscountPolicy;
+import inflearn.springCoreBasic.discount.RateDiscountPolicy;
 import inflearn.springCoreBasic.member.MemberRepository;
 import inflearn.springCoreBasic.member.MemberService;
 import inflearn.springCoreBasic.member.MemberServiceImpl;
@@ -23,6 +24,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
